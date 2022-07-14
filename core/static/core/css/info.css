@@ -1,0 +1,299 @@
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+.light-mode {
+    background-color: white;
+    color: black;
+}
+
+.oscuro{
+    background-color: black;
+}
+.claro{
+    background-color:white;
+}
+
+#navbar a{
+    color: azure;
+    font-size: 23px;
+    font-style: italic;
+    font-family: Sans-serif;
+}
+
+
+.navbar .dm-confi{
+    color: white;
+    width: 25px;
+    height: 25px;
+}
+
+.navbar .wm-confi{
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar .dm-config{
+    background-color: transparent;
+    border: none;
+    width: 45px;
+    height: 45px;
+}
+
+/*SECTION 1*/
+.dark-mode{
+    background-color: black;
+    color: white;
+  }
+  .light-mode{
+    background-color: white;
+    color: black;
+  }
+
+#boton-modo1{
+    font-size: 30px !important;
+    font-weight: 500;;
+}
+#boton-modo2{
+    font-size: 30px !important;
+    font-weight: 500;
+}
+
+#section-0{
+    background-color: black;
+}
+
+#section-1{
+    background-color: mistyrose;
+}
+
+#h1-1{
+    margin-top: 100px;
+    color: rebeccapurple;
+}
+
+#texto-1{
+    margin-bottom: 150px;
+    color: black;
+}
+
+#h1-2{
+    color: rebeccapurple;
+    margin-bottom: 50px;
+}
+
+#parrafo-1{
+    font-weight: 500;
+    color: black;
+}
+
+#parrafo-2{
+    font-weight: 500;
+    color: black;
+}
+
+#parrafo-3{
+    font-weight: 500;
+    color: black;
+}
+
+
+/*SECTION 2*/
+#h1-3{
+    margin-top: 150px;
+}
+
+.list-group-item{
+    color: lightcoral;
+}
+
+
+/*SECTION 3*/
+#h1-4{
+    margin-top: 150px;
+}
+#boton{
+    font-size: 30px !important;
+    font-weight: 500;
+}
+
+
+/*SECTION 4*/
+
+#h1-5{
+    margin-top: 150px;
+}
+
+#card-1{
+    background-color: slategray;
+}
+
+#card-2{
+    background-color: slategray;
+}
+
+#card-3{
+    background-color: slategray;
+}
+
+#card-4{
+    background-color: slategray;
+}
+
+#card-5{
+    background-color: slategray;
+}
+
+#card-6{
+    background-color: slategray;
+}
+
+.card-group{
+    color: black;
+    margin-bottom: 50px;
+}
+
+
+
+/*FOOTER*/
+#correo-footer label{
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+#menu-footer h3{
+    font-size: 50px;
+    font-weight: 600;
+    padding-bottom: 50px;
+}
+
+#menu-footer a{
+    color: gray !important;
+    font-size: 20px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+#paginas-footer h3{
+    font-size: 50px;
+    font-weight: 600;
+    padding-bottom: 50px;
+}
+
+#paginas-footer a{
+    color: gray !important;
+    font-size: 20px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+
+#contacto-footer h3{
+    font-size: 50px;
+    font-weight: 600;
+    padding-bottom: 50px;
+}
+
+#contacto-footer p{
+    color: gray !important;
+    font-weight: 500;
+    margin-top: -17px;
+}
+
+ /* Relog */
+
+ .tiempo{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hours, .dots, .minutes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600px;
+    padding: 0 10px;
+    line-height: 50px;
+  }
+  .hours, .minutes{
+    font-size: 2.5em;
+    width: 40px;
+  }
+  
+  .dots{
+    font-size:2.5em;
+    color: white;
+  }
+  
+  .hours{
+    background: -webkit-linear-gradient(90deg,white,white);
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
+  }
+  
+  .minutes{
+    background: -webkit-linear-gradient(90deg,white,white);
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
+  }
+  
+  .right-side{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+  
+  .period, .seconds{
+    font-size: 1em;
+    font-weight: 500;
+  }
+  
+  .period{
+    transform: translateY(-20px);
+    background: -webkit-linear-gradient(90deg,white,white);
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
+  }
+  
+  .seconds{
+    transform: translateY(16px);
+    background: -webkit-linear-gradient(90deg,white,white);
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
+  }
+  
+  .calendar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    font-weight: 500;
+    margin-bottom: 5px;
+    background: -webkit-linear-gradient(90deg,white,white);
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
+  }
+  
+  .day-name, .day-number, .year, .month-name{
+    margin-left: 4px;
+    background: -webkit-linear-gradient(90deg,white,white);
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
+  
+  }
+   /* Logo */
+  .img-logo-nav {
+    height: 80px;
+    width: 80px;
+  }
+  

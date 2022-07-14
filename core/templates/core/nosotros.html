@@ -1,0 +1,99 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+
+{% block title %}Nosotros |{% endblock %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'core/css/nosotros.css' %}">
+
+
+<header class="container-fluid colorC d-flex justify">
+    <p id="parrafo" class="text-mb-0 p-2 fs-3"> Sobre Nosotros</p>
+    </header>
+<div style="text-align:center">
+  <img src="https://www.duoc.cl/wp-content/uploads/2020/05/sede_san_joaquin-1920x600.jpg" class="img-fluid" alt="...">
+  <br>
+  <br>
+  <br>
+</div>
+
+<!--========================================================== -->
+                    <!-- PARRAFO -->
+<!--========================================================== -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-2"> 
+      <p id="parrafo2" class="fs-1">Quiénes somos</p>
+      <p class="parrafos">Estudiantes de Ingeniería en informática en la institución de DUOC UC sede san Joaquín, amantes de la programación. Actualmente estamos cursando el segundo año de nuestra carrera.</p>  
+      <p class="parrafos">Este es nuestro proyecto de programación web, en este realizamos la creación de una página para una institución mental destinada a la ayuda de las personas con este tipo de dificultades. </p>
+    </div>
+    <div class="col-3"></div>
+  </div>
+</div>
+<br>
+<br>
+<a class="btn colorB centrado" id="boton" href="contacto.html" role="button">Contáctanos</a>
+<br>
+<br>
+<br>
+<!--========================================================== -->
+                    <!-- HOOVER -->
+<!--========================================================== -->
+<div class="container-fluid">
+<div class="row" id="centrar">
+      <figure class="snip0018" >
+        <img src="https://images.unsplash.com/photo-1577375729152-4c8b5fcda381?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880" class="img-fluid" alt="sample5"/>
+        <figcaption>
+          <div><h2>Nuestra   Mision   es </h2></div>
+          <div><p>Crear soluciones a las necesidades de las personas.</p></div>
+        </figcaption>     
+      </figure>
+      <figure class="snip0018" >
+        <img src="https://images.unsplash.com/photo-1577375774296-1480089cb555?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880" class="img-fluid" alt="sample5"/>
+        <figcaption>
+          <div><h2>Nuestros Valores Son </h2></div>
+          <div><p>Trabajo en equipo y dedicación a la programación. </p></div>
+        </figcaption>     
+      </figure>
+    </div>
+  </div>
+<br>
+<br>
+<!--========================================================== -->
+                    <!-- INTEGRANTES -->
+<!--========================================================== -->
+<div class="container-fluid">
+   <p class="text-danger fs-1 text-center">Equipo</p>
+</div>
+<br>
+<br>
+<br>
+<!--========================================================== -->
+                    <!-- Integrantes -->
+<!--========================================================== -->
+<div class="container mt-4 mb-4">
+   <div class="row row-cols-1 row-cols-md-4 g-4">
+       {% for p in empleados %}
+       <div class="col">
+           <div class="card">
+               {% if p.imagen %}
+                   <img class="card-img-top" src="{{p.imagen.url}}" alt="{{p.nombre}}"></td>
+               {% else %}
+                   <img class="card-img-top" src="{% static 'crud/img/not_found.png' %}" alt="{{p.nombre}}"></td>
+               {% endif %}
+               <div class="card-body">
+                   <h5 class="card-title fw-bold">Nombre: {{p.nombre}}</h5>
+                   <p class="card-text">Descripción: {{p.descripcion}}</p>
+                   <p class="card-text font-primary">Edad: {{p.edad}} años</p>
+               </div>
+           </div>
+       </div>
+       {% endfor %}
+   </div>
+</div>
+<script src="{% static 'core/js/nosotros.js' %}"></script>
+{% endblock %}
+

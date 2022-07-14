@@ -1,0 +1,65 @@
+{% extends 'crud_ubicacion/base.html' %}
+
+{% load static %}
+
+{% block title %}Update Product{% endblock %}
+
+{% block content %}
+<div class="container mt-4 py-4 text-white bg-dark rounded">
+    <h1>Modificación de Datos de Empleado</h1>
+</div>
+{% endblock %}
+
+{% block secondary_content %}
+<div class="container mt-4 mb-4">
+    <div class="row">
+        {% if 'OK' in request.GET %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Completado</strong> Empleado Actualizado satisfactoriamente.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endif %}
+        {% if 'FAIL' in request.GET %}
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>UPS Ocurrio un problema</strong> No se logró completar la acción de registro
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endif %}
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group mb-3">
+                <label for="nombre" class="fw-bold">Nombre</label>
+                <div class="input-group">
+                    {{form.nombre}}
+                </div>
+            </div>
+            <div class="form-group mb-3">
+                <label for="descripcion" class="fw-bold">Descripción</label>
+                <div class="input-group">
+                    {{form.descripcion}}
+                </div>
+            </div>
+            <div class="form-group mb-3">
+                <label for="edad" class="fw-bold">Edad</label>
+                <div class="input-group">
+                    {{form.edad}}
+                </div>
+            </div>
+            <div class="form-group mb-3">
+                <label for="imagen" class="fw-bold">Imagen</label>
+                <div class="input-group">
+                    {{form.imagen}}
+                </div>
+                {% if form.instance.imagen %}
+                    <img class="img-producto-update" src="{{form.instance.imagen.url}}" alt="">
+                {% endif %}
+            </div>
+            <div class="text-center mt-4">
+                <input type="submit" class="btn btn-outline-primary btn-block py-2" id="enviar" value="Actualizar">
+                <input type="reset" class="btn btn-outline-success btn-block py-2" id="limpiar" value="Limpiar">
+                <a class="btn btn-outline-secondary btn-block py-2" href="{% url 'Empleado' %}">Ir a Lista</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

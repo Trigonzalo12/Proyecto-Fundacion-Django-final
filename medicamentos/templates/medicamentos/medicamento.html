@@ -1,0 +1,100 @@
+{% extends 'crud_ubicacion/base.html' %}
+
+{% load static %}
+
+{% block title %}Medicamentos{% endblock %}
+
+{% block content %}
+<div class="container mt-4 py-5 bg-dark text-white">
+    <h1>Administracion de Medicamentos</h1>
+</div>
+<div class="container-fluid mt-4 mb-4">
+    <div class="row">
+        {% if 'OK' in request.GET %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Completado</strong> Medicamento registrado satisfactoriamente.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+        {% if 'FAIL' in request.GET %}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Ocurrio un problema</strong> En estos momentos no podemos atender su solicitud.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+        <div class="table-responsive">
+            <table class="table table-hover ">
+                <thead>
+                    <tr>
+                        <td>ID_Medicamento</td>
+                        <td>Descripción</td>
+                        <td>Precio</td>
+                        <td>Stock</td>
+                        <td>Imagen</td>
+                        <td>Marca</td>
+                        <td>Opciones</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for m in medicacion %}
+                    <tr>
+                        <td>
+                            <a href="/medicamentos/{{m.idMedicamento}}">{{m.idMedicamento}}</a>
+                        </td>
+                        <td>{{m.descripcion}}</td>
+                        <td>{{m.precio}}</td>
+                        <td>{{m.stock}}</td>
+                        {% if m.imagen %}
+                        <td><img class="img-producto" src="{{m.imagen.url}}" alt="{{m.idMedicamento}}"></td>
+                        {% else %}
+                        <td><img class="img-producto" src="{% static 'core/img/not_found.png' %}" alt="{{m.idMedicamento}}">
+                        </td>
+                        {% endif %}
+                        <td>{{m.marca}}</td>
+                        <td>
+                            <a class="btn btn-warning" href="/medicamentos/{{m.idMedicamento}}/editar">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </a>
+                            <a class="btn btn-danger modal-borrar" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop" data-href="/medicamentos/{{m.idMedicamento}}/eliminar">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Atención!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6 class="modal-title">Estas seguro que deseas eliminar el medicamento seleccionado?<br>Esta acción no se puede deshacer.</h6>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">No</button>
+                <a href="#" id="confirmar-borrar" class="btn btn-danger">Si</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block js %}
+<script>
+    $('.modal-borrar').on('click',function() {
+        const href = $(this).attr('data-href');
+        $('#confirmar-borrar').attr('href',href);
+    })
+</script>
+{% endblock %}
+

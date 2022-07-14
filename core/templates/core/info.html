@@ -1,0 +1,457 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+
+{% block title %}Informacion | {% endblock %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'core/css/info.css' %}">
+<script src="{% static 'core/js/info.js' %}"></script>
+
+<section class="container-fluid" id="section-1">
+    <div>
+      <div class="row text-center">
+        <h1 id="h1-1">¿Te has puesto a reflexionar sobre la importancia de la salud mental?</h1>
+      </div>
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+          <h4 class="text-center mt-4" id="texto-1">Las enfermedades de salud mental constituyen una epidemia silenciosa que ha afectado a las Américas mucho antes de COVID-19, con depresión y ansiedad como dos de las principales causas de discapacidad. La Región también tiene el segundo nivel más alto de consumo de alcohol en el mundo”.</h4></div>
+        <div class="col-2"></div>
+      </div>
+      
+      <div class="row" id="datos">
+        <h1 class="text-center" id="h1-2">Algunos datos impactantes sobre la salud mental</h1>
+        <div class="col-xxl-4">
+          <p class="text-center fs-3" id="parrafo-1">Los trastornos mentales, neurológicos y por el consumo de sustancias representan el 10% de la carga mundial de morbimortalidad y el 30% de las enfermedades no mortales.</p>
+        </div>
+        <div class="col-xxl-4">
+          <p class="text-center fs-3 " id="parrafo-2">Alrededor 1 de cada 5 niños, niñas y adolescentes es diagnosticado con un trastorno mental.
+            La depresión es uno de los principales trastornos que afecta a la población mundial, siendo una de las causas más importantes de discapacidad.</p>
+        </div>
+        <div class="col-xxl-4">
+          <p class="text-center fs-3" id="parrafo-3">
+            Una persona se suicida en el mundo cada 40 segundos aproximadamente.
+          </p>
+        </div>
+      </div>
+      <img class=" img-fluid rounded mx-auto d-block m-4" src="https://www.chilepositivo.org/wp-content/uploads/2020/01/depresion-13enero-450x450.png" alt="imagen-depresion">
+    </div>
+  </section>
+
+  <!--========================================================== -->
+                        <!-- SECTION 2 -->
+  <!--========================================================== -->
+  <section class="container-fluid">
+    <div>
+    <h1 class="text-center" id="h1-3">Sobre nuestra fundacion</h1>
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8"><h3 class="mt-4 mx-auto text-center" id="titulo3">Al lograr darnos cuenta sobre la brecha abierta que existe en nuestro pais, decidimos que ya era momento de que alguien se hiciera cargo, estamos dispuestos 24/7 en nuestro centro para la ayuda de gente que se sienta sola. Contamos con expertos que estaran contigo para ayudarte en tu camino de encontrar la estabilidad mental. </h3></div>
+      <div class="col-md-2"></div>
+    </div>
+    <div class="row">
+      <h2 class="text-center mt-4 mb-4">Ofrecemos los siguientes servicios</h2>
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <ul class="list-group list-group-flush text-center fs-1">
+          <li class="list-group-item" id="li1">De los mejores psicologos disponibles en el pais</li>
+          <li class="list-group-item" id="li2">Facil acceso a medicamentos que sean necesarios</li>
+          <li class="list-group-item" id="li3">Zonas de reflexion</li>
+          <li class="list-group-item" id="li4">Clases de yoga</li>
+          <li class="list-group-item" id="li5">Servicio 24/7</li>
+        </ul> 
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+    </div>
+  </section>
+
+  <!--========================================================== -->
+                        <!-- SECTION 3 -->
+  <!--========================================================== -->
+  <section class="container-fluid">
+    <div>
+      <h1 class="text-center" id="h1-4">¿Quieres colaborar con nosotros?</h1>
+    <div class="row">
+      <div class="col-md">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 mx-auto"><h4 class="text-center">Contamos con becas para gente que no puede pagar pagar un servicio de ayuda mental, entonces nuestras colaboraciones estan destinadas para la gente que no tiene dinero para pagar.</h4>
+            <img class="img-fluid" src="https://img.freepik.com/vector-gratis/concepto-donacion-ropa-dibujada-mano_52683-54767.jpg?w=2000" alt=""> 
+        <div class="row">
+          <button class="btn btn-primary mx-auto" id="boton">Hazte donador aqui</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!--========================================================== -->
+                        <!-- SECTION 4 -->
+  <!--========================================================== -->
+
+  <section class="container-sm">
+    <div class="row">
+      <h1 class="text-center" id="h1-5" >Nuestros Aportadores</h1>
+        <div class="card-group">
+            <div class="card" id="card-1">
+              <img class="img-fluid" id="imagen0" src="https://randomuser.me/api/portraits/men/75.jpg" alt="imagen1" >
+              <div class="card-body">
+                <h3 class="card-title text-center" id="nombre0"></h3>
+                <div class="row">
+                  <div class="col-3">
+                    <h5 class="card-text">Genero: </h5>
+                  </div>
+                  <div class="col-9">
+                    <h5 class="text-center" id="genero0"> </h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-3">
+                    <h5 class="card-text">Edad:  </h5>
+                  </div>
+                  <div class="col-9">
+                    <h5 class="text-center" id="edad0"></h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-3">
+                    <h5 class="card-text">Ciudad:  </h5>
+                  </div>
+                  <div class="col-9">
+                    <h5 class="text-center" id="ciudad0"></h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-3">
+                    <h5 class="card-text">Pais:  </h5>
+                  </div>
+                  <div class="col-9">
+                    <h5 class="text-center" id="pais0"></h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-3">
+                    <h5 class="card-text">Número:  </h5>
+                  </div>
+                  <div class="col-9">
+                    <h5 class="text-center" id="numero0"></h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-3">
+                    <h5 class="card-text ">Correo:  </h5>
+                  </div>
+                  <div class="col-9">
+                    <h5 class="text-center" id="correo0"></h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card" id="card-2">
+              <img class="img-fluid" id="imagen1" src="https://randomuser.me/api/portraits/men/75.jpg" alt="imagen2">
+              <div class="card-body">
+                <h3 class="card-title text-center" id="nombre1"></h3>
+                <div class="row">
+                  <div class="col-3">
+                    <h5 class="card-text">Genero: </h5>
+                  </div>
+                  <div class="col-9">
+                    <h5 class="text-center" id="genero1"> </h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-3">
+                    <h5 class="card-text">Edad:  </h5>
+                  </div>
+                  <div class="col-9">
+                    <h5 class="text-center" id="edad1"></h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-3">
+                    <h5 class="card-text">Ciudad:  </h5>
+                  </div>
+                  <div class="col-9">
+                    <h5 class="text-center" id="ciudad1"></h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-3">
+                    <h5 class="card-text">Pais:  </h5>
+                  </div>
+                  <div class="col-9">
+                    <h5 class="text-center" id="pais1"></h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-3">
+                    <h5 class="card-text">Número:  </h5>
+                  </div>
+                  <div class="col-9">
+                    <h5 class="text-center" id="numero1"></h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-3">
+                    <h5 class="card-text ">Correo:  </h5>
+                  </div>
+                  <div class="col-9">
+                    <h5 class="text-center" id="correo1"></h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="card" id="card-3">
+              <img class="img-fluid" id="imagen2" src="https://randomuser.me/api/portraits/men/75.jpg" alt="imagen3">
+              <div class="card-body">
+                <h3 class="card-title text-center" id="nombre2"></h3>
+                <div class="row">
+                  <div class="col-3">
+                    <h5 class="card-text">Genero: </h5>
+                  </div>
+                  <div class="col-9">
+                    <h5 class="text-center" id="genero2"> </h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-3">
+                    <h5 class="card-text">Edad:  </h5>
+                  </div>
+                  <div class="col-9">
+                    <h5 class="text-center" id="edad2"></h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-3">
+                    <h5 class="card-text">Ciudad:  </h5>
+                  </div>
+                  <div class="col-9">
+                    <h5 class="text-center" id="ciudad2"></h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-3">
+                    <h5 class="card-text">Pais:  </h5>
+                  </div>
+                  <div class="col-9">
+                    <h5 class="text-center" id="pais2"></h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-3">
+                    <h5 class="card-text">Número:  </h5>
+                  </div>
+                  <div class="col-9">
+                    <h5 class="text-center" id="numero2"></h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-3">
+                    <h5 class="card-text ">Correo:  </h5>
+                  </div>
+                  <div class="col-9">
+                    <h5 class="text-center" id="correo2"></h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        
+
+        <div class="card-group">
+          <div class="card" id="card-4">
+            <img class="img-fluid" id="imagen3" src="https://randomuser.me/api/portraits/men/75.jpg" alt="imagen4">
+            <div class="card-body">
+              <h3 class="card-title text-center" id="nombre3"></h3>
+              <div class="row">
+                <div class="col-3">
+                  <h5 class="card-text">Genero: </h5>
+                </div>
+                <div class="col-9">
+                  <h5 class="text-center" id="genero3"> </h5>
+                </div>
+              </div>
+  
+              <div class="row">
+                <div class="col-3">
+                  <h5 class="card-text">Edad:  </h5>
+                </div>
+                <div class="col-9">
+                  <h5 class="text-center" id="edad3"></h5>
+                </div>
+              </div>
+  
+              <div class="row">
+                <div class="col-3">
+                  <h5 class="card-text">Ciudad:  </h5>
+                </div>
+                <div class="col-9">
+                  <h5 class="text-center" id="ciudad3"></h5>
+                </div>
+              </div>
+  
+              <div class="row">
+                <div class="col-3">
+                  <h5 class="card-text">Pais:  </h5>
+                </div>
+                <div class="col-9">
+                  <h5 class="text-center" id="pais3"></h5>
+                </div>
+              </div>
+  
+              <div class="row">
+                <div class="col-3">
+                  <h5 class="card-text">Número:  </h5>
+                </div>
+                <div class="col-9">
+                  <h5 class="text-center" id="numero3"></h5>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-3">
+                  <h5 class="card-text ">Correo:  </h5>
+                </div>
+                <div class="col-9">
+                  <h5 class="text-center" id="correo3"></h5>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+  
+          <!--========================================================== -->
+                          <!-- Cards 2-->
+          <!--========================================================== -->
+          <div class="card" id="card-5">
+            <img class="img-fluid" id="imagen4" src="https://randomuser.me/api/portraits/men/75.jpg" alt="imagen5">
+            <div class="card-body">
+              <h3 class="card-title text-center" id="nombre4"></h3>
+              <div class="row">
+                <div class="col-3">
+                  <h5 class="card-text">Genero: </h5>
+                </div>
+                <div class="col-9">
+                  <h5 class="text-center" id="genero4"> </h5>
+                </div>
+              </div>
+  
+              <div class="row">
+                <div class="col-3">
+                  <h5 class="card-text">Edad:  </h5>
+                </div>
+                <div class="col-9">
+                  <h5 class="text-center" id="edad4"></h5>
+                </div>
+              </div>
+  
+              <div class="row">
+                <div class="col-3">
+                  <h5 class="card-text">Ciudad:  </h5>
+                </div>
+                <div class="col-9">
+                  <h5 class="text-center" id="ciudad4"></h5>
+                </div>
+              </div>
+  
+              <div class="row">
+                <div class="col-3">
+                  <h5 class="card-text">Pais:  </h5>
+                </div>
+                <div class="col-9">
+                  <h5 class="text-center" id="pais4"></h5>
+                </div>
+              </div>
+  
+              <div class="row">
+                <div class="col-3">
+                  <h5 class="card-text">Número:  </h5>
+                </div>
+                <div class="col-9">
+                  <h5 class="text-center" id="numero4"></h5>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-3">
+                  <h5 class="card-text ">Correo:  </h5>
+                </div>
+                <div class="col-9">
+                  <h5 class="text-center" id="correo4"></h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+  
+          <!--========================================================== -->
+                          <!-- Cards 3-->
+          <!--========================================================== -->
+          <div class="card" id="card-6">
+            <img class="img-fluid" id="imagen5" src="https://randomuser.me/api/portraits/men/75.jpg" alt="imagen6">
+            <div class="card-body">
+              <h3 class="card-title text-center" id="nombre5"></h3>
+              <div class="row">
+                <div class="col-3">
+                  <h5 class="card-text">Genero: </h5>
+                </div>
+                <div class="col-9">
+                  <h5 class="text-center" id="genero5"> </h5>
+                </div>
+              </div>
+  
+              <div class="row">
+                <div class="col-3">
+                  <h5 class="card-text">Edad:  </h5>
+                </div>
+                <div class="col-9">
+                  <h5 class="text-center" id="edad5"></h5>
+                </div>
+              </div>
+  
+              <div class="row">
+                <div class="col-3">
+                  <h5 class="card-text">Ciudad:  </h5>
+                </div>
+                <div class="col-9">
+                  <h5 class="text-center" id="ciudad5"></h5>
+                </div>
+              </div>
+  
+              <div class="row">
+                <div class="col-3">
+                  <h5 class="card-text">Pais:  </h5>
+                </div>
+                <div class="col-9">
+                  <h5 class="text-center" id="pais5"></h5>
+                </div>
+              </div>
+  
+              <div class="row">
+                <div class="col-3">
+                  <h5 class="card-text">Número:  </h5>
+                </div>
+                <div class="col-9">
+                  <h5 class="text-center" id="numero5"></h5>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-3">
+                  <h5 class="card-text ">Correo:  </h5>
+                </div>
+                <div class="col-9">
+                  <h5 class="text-center" id="correo5"></h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+{% endblock %}

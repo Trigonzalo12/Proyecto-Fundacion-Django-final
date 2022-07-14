@@ -1,0 +1,76 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<h1 class="text-center" id="Titulo2">Medicamentos</h1>
+<h4 class="text-center mt-4" id="texto-1">Gracias al convenio de nuestra institucion con farmacias cruz verde , las personas registradas pueden obtener a eleccion un medicamento gratis al mes.</h4>
+<br>
+<br>
+<h4 class="text-right">Listas de medicamentos disponibles</h4>
+{% endblock %}
+{% block secondary_content %}
+<div class="container mt-4 mb-4">
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        {% for m in medicamentos %}
+        <div class="col">
+            <div class="card">
+                {% if m.imagen %}
+                    <img class="card-img-top" src="{{m.imagen.url}}" alt="{{m.idMedicamento}}"></td>
+                {% else %}
+                    <img class="card-img-top" src="{% static 'core/img/not_found.png' %}" alt="{{m.idMedicamento}}"></td>
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">{{m.descripcion}}</h5>
+                    <p class="card-text">Precio : ${{m.precio}} </p>
+                    <p class="card-text font-primary">Productos en Stock :{{m.stock}}</p>
+                    <p class="card-text">Marca: {{m.marca}}</p>
+                </div>
+                <div class="card-footer text-center">
+                        {% if request.session.usuario.rol == 'USER' %}
+                        <a class="btn btn-outline-danger modal-borrar mx-auto" data-bs-toggle="modal" data-bs-target="#Form">Pedir este medicamento</a> 
+                        <div class="modal fade" id="Form" data-bs-backdrop="static" data-bs-keyboard="false">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="Form">Ingrese su Direccion</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h6 class="modal-title">Direccion</h6>
+                                        <input type="text">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <a a class="btn btn-outline-danger modal-borrar mx-auto" data-bs-toggle="modal" data-bs-target="#Form">Confirmar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% else %}
+                        <a class="btn btn-outline-danger modal-borrar mx-auto" data-bs-toggle="modal" data-bs-target="#staticBackdrop"  >Pedir este medicamento</a>
+
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Error</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h6 class="modal-title">Necesita iniciar sesion para poder pedir un medicamento .</h6>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <a href="{% url 'registro' %}" id="confirmar-borrar" class="btn btn-success">Ir a registro</a>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+            </div>
+        </div>
+    </div>
+        {% endfor %}
+    </div>
+ </div>
+ {% endblock %}

@@ -1,0 +1,71 @@
+{% extends 'crud_ubicacion/base.html' %}
+
+{% load static %}
+
+{% block title %}Ubicaciones{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row mb-3">
+        <h1>Codigo Ubicacion: {{ubicacion.idUbicacion}}</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            {% if ubicacion.imagen %}
+                <img class="img-thumbnail" src="{{ubicacion.imagen.url}}" alt="{{ubicacion.idUbicacion}}">
+            {% else %}
+                <img class="img-thumbnail" src="{% static 'core/img/not_found.png' %}" alt="{{ubicacion.Ubicacion}}">
+            {% endif %}
+        </div>
+        <div class="col-md-8">
+            <ul class="list-unstyled">
+                <li class="mb-2">Nombre: <p class="fw-bold">{{ubicacion.nombreUbicacion}}</p></li>
+                <li class="mb-2">Direccion: <p class="fw-bold">{{ubicacion.direccion}}</p></li>
+                <li class="mb-2">Comuna: {{ubicacion.comuna}}</li>
+                <li class="mb-2">Region : {{ubicacion.region}}</li>
+            </ul>
+            <div class="row">
+                <div class="col-2">
+                    <a class="btn btn-outline-warning mx-auto" href="/crud_ubicacion/{{ubicacion.idUbicacion}}/editar">Editar</a>
+                </div>
+                <div class="col-2">
+                    <a class="btn btn-outline-danger modal-borrar mx-auto" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-href="/crud_ubicacion/{{ubicacion.idUbicacion}}/eliminar">Eliminar</a>
+                </div>
+                <div class="col-2">
+                    <a class="btn btn-outline-primary mx-auto" href="{% url 'Empleado' %}">Volver</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Atención!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6 class="modal-title">Estas seguro que deseas eliminar la ubicacion seleccionada?<br>Esta acción no se puede deshacer.</h6>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">No</button>
+                <a href="#" id="confirmar-borrar" class="btn btn-danger">Si</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block js %}
+<script>
+    $('.modal-borrar').on('click',function() {
+        const href = $(this).attr('data-href');
+        $('#confirmar-borrar').attr('href',href);
+    })
+</script>
+{% endblock %}
