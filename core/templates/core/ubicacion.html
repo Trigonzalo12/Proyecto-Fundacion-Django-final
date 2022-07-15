@@ -7,6 +7,7 @@
 {% block content %}
 {% load static %}
 <link rel="stylesheet" href="{% static 'core/css/ubicacion.css' %}">
+<link rel="stylesheet" href="{% static 'core/css/cards.css' %}">
 <script src="{% static 'core/js/ubicacion.js' %}"></script>
 
 <h4 class="col-md-4 m-auto mb-5">el siguiente mapa le dará una ubicacion aproximada de donde se encuentra actualmente</h4>
@@ -21,8 +22,8 @@
 </div>
 <div class="col-md-4 m-auto mb-5"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.5510726305292!2d-70.61036838255615!3d-33.434946599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf773fd948fd%3A0x4b3387e39b82b724!2sLos%20Estanques%202012%2C%20Providencia%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1653512981363!5m2!1ses!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>  
 
-<h4>Pueden ubicarnos en todas nuestras sedes a lo largo de chile</h4>
     <div class="container mt-4 mb-4">
+        <h4>Pueden ubicarnos en todas nuestras sedes a lo largo de chile</h4>
         <div class="row row-cols-1 row-cols-md-4 g-4">
             {% for u in ubicacion %}
             <div class="col">

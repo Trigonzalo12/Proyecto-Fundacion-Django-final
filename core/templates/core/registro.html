@@ -26,25 +26,25 @@
                     </div>
                     <div class="card-body">
                         <div class="mb-3 row">
-                            <label for="first_name" class="col-sm-3 col-form-label fw-bold">First Name</label>
+                            <label for="first_name" class="col-sm-3 col-form-label fw-bold">Nombre</label>
                             <div class="col-sm 9">
                                 <input class="form-control" type="text" name="first_name" id="first_name" maxlength=30 required>
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="last_name" class="col-sm-3 col-form-label fw-bold">Last Name</label>
+                            <label for="last_name" class="col-sm-3 col-form-label fw-bold">Apellido</label>
                             <div class="col-sm 9">
                                 <input class="form-control" type="text" name="last_name" id="last_name" maxlength=30 required>
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="email" class="col-sm-3 col-form-label fw-bold">Email</label>
+                            <label for="email" class="col-sm-3 col-form-label fw-bold">Correo</label>
                             <div class="col-sm 9">
                                 <input class="form-control" type="email" name="email" id="email" maxlength=100 required>
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="password" class="col-sm-3 col-form-label fw-bold">Password</label>
+                            <label for="password" class="col-sm-3 col-form-label fw-bold">Contraseña</label>
                             <div class="col-sm 9">
                                 <input class="form-control" type="password" name="password" id="password" required>
                                 <ul class="fst-italic fs-6">
@@ -57,7 +57,7 @@
                             
                         </div>
                         <div class="mb-3 row">
-                            <label for="password_confirm" class="col-sm-3 col-form-label fw-bold">Confirm Pass</label>
+                            <label for="password_confirm" class="col-sm-3 col-form-label fw-bold">Confirmar Contraseña</label>
                             <div class="col-sm 9">
                                 <input class="form-control" type="password" name="password_confirm" id="password_confirm" required>
                             </div>
@@ -65,8 +65,8 @@
                     </div>
                     <div class="card-footer text-center">
                         <div class="d-grid gap-2 col-4 mx-auto">
-                            <input class="btn btn-primary" type="submit" value="Register">
-                            <input class="btn btn-dark" type="reset" value="Clear">
+                            <input class="btn btn-primary" type="submit" value="Registrar">
+                            <input class="btn btn-dark" type="reset" value="Cancelar">
                         </div>
                     </div>
                 </div>
@@ -77,17 +77,17 @@
                 {% csrf_token %}
                 <div class="card border-0">
                     <div class="card-header text-white bg-dark">
-                        <h2 class="card-title">Login</h2>
+                        <h2 class="card-title">Ingresar</h2>
                     </div>
                     <div class="card-body">
                         <div class="mb-3 row">
-                            <label for="email" class="col-sm-3 col-form-label fw-bold">Email</label>
+                            <label for="email" class="col-sm-3 col-form-label fw-bold">Correo</label>
                             <div class="col-sm 9">
                                 <input class="form-control" type="email" name="email_login" id="email_login" maxlength=100 required>
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="password" class="col-sm-3 col-form-label fw-bold">Password</label>
+                            <label for="password" class="col-sm-3 col-form-label fw-bold">Contraseña</label>
                             <div class="col-sm 9">
                                 <input class="form-control" type="password" name="password_login" id="password_login" required>
                             </div>
@@ -95,8 +95,8 @@
                     </div>
                     <div class="card-footer text-center bg-transparent border-0">
                         <div class="d-grid gap-2 col-4 mx-auto">
-                            <input class="btn btn-primary" type="submit" value="Login">
-                            <input class="btn btn-dark" type="reset" value="Clear">
+                            <input class="btn btn-primary" type="submit" value="Ingresar">
+                            <input class="btn btn-dark" type="reset" value="Cancelar">
                         </div>
                     </div>
                 </div>
