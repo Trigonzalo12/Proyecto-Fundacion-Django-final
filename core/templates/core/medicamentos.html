@@ -7,10 +7,13 @@
 <h4 class="text-center mt-4" id="texto-1">Gracias al convenio de nuestra institucion con farmacias cruz verde , las personas registradas pueden obtener a eleccion un medicamento gratis al mes.</h4>
 <br>
 <br>
-<h4 class="text-right">Listas de medicamentos disponibles</h4>
 {% endblock %}
 {% block secondary_content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'core/css/cards.css' %}">
+
 <div class="container mt-4 mb-4">
+    <h3 class="text-right">Listas de medicamentos disponibles</h3>
     <div class="row row-cols-1 row-cols-md-4 g-4">
         {% for m in medicamentos %}
         <div class="col">
@@ -28,7 +31,7 @@
                 </div>
                 <div class="card-footer text-center">
                         {% if request.session.usuario.rol == 'USER' %}
-                        <a class="btn btn-outline-danger modal-borrar mx-auto" data-bs-toggle="modal" data-bs-target="#Form">Pedir este medicamento</a> 
+                        <a class="btn btn-primary modal-borrar mx-auto" data-bs-toggle="modal" data-bs-target="#Form">Pedir este medicamento</a> 
                         <div class="modal fade" id="Form" data-bs-backdrop="static" data-bs-keyboard="false">
                             <div class="modal-dialog">
                                 <div class="modal-content">
@@ -47,7 +50,7 @@
                             </div>
                         </div>
                         {% else %}
-                        <a class="btn btn-outline-danger modal-borrar mx-auto" data-bs-toggle="modal" data-bs-target="#staticBackdrop"  >Pedir este medicamento</a>
+                        <a class="btn btn-primary modal-borrar mx-auto" data-bs-toggle="modal" data-bs-target="#staticBackdrop"  >Pedir este medicamento</a>
 
                         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false">
                             <div class="modal-dialog">

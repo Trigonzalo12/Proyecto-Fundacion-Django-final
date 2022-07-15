@@ -51,4 +51,4 @@ def detalle_expertos(request,id_experto):
     
     elif request.method == 'DELETE':
         experto.delete()
-        return Response({'mensaje':'El producto {} ha sido eliminado satisfactoriamente!'.format(product_id)},status=status.HTTP_204_NO_CONTENT)
+        return Response({'mensaje':'El producto {} ha sido eliminado satisfactoriamente!'.format(id_experto)},status=status.HTTP_204_NO_CONTENT)
